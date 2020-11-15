@@ -3,6 +3,8 @@ package com.estagio.supervisionado.oitavo.periodo.monitoramento.resources;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +22,12 @@ public class MonitoramentoResource {
 	public ResponseEntity<?> findLastObject(){
 		Monitoramento obj = service.findLastObject();
 		return ResponseEntity.ok().body(obj);
+	}
+	
+	@PostMapping
+	public ResponseEntity<Void> insert(@RequestBody Monitoramento obj){
+		obj = service.insert(obj);
+		return ResponseEntity.ok().build();
 	}
 	
 }

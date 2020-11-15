@@ -21,4 +21,8 @@ public class MonitoramentoService {
 		Monitoramento last = list.get(0);
 	    return last;
 	}
+	
+	public Monitoramento insert(Monitoramento obj) {
+		return repository.save(obj);
+	}
 }
