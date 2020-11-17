@@ -1,6 +1,7 @@
 package com.estagio.supervisionado.oitavo.periodo.monitoramento.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ public class Monitoramento implements Serializable {
 	private Integer idClinica;
 	private Double temperatura;
 	private Double umidade;
+	private Date dtHrDados;
 	
 	public Monitoramento() {
 	}
@@ -31,10 +33,6 @@ public class Monitoramento implements Serializable {
 
 	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public Integer getIdClinica() {
@@ -59,6 +57,10 @@ public class Monitoramento implements Serializable {
 
 	public void setUmidade(Double umidade) {
 		this.umidade = umidade;
+	}
+
+	public Date getDtHrDados() {
+		return dtHrDados;
 	}
 	
 }

@@ -1,8 +1,5 @@
 package com.estagio.supervisionado.oitavo.periodo.monitoramento.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +12,8 @@ public class MonitoramentoService {
 	@Autowired
 	private MonitoramentoRepository repository;
 	
-	public Monitoramento findLastObject(){
-		List<Monitoramento> list = new ArrayList<>();
-		list = repository.findAllByOrderByIdDesc();
-		Monitoramento last = list.get(0);
-	    return last;
+	public Monitoramento findLastData() {
+		return repository.findLastData();
 	}
 	
 	public Monitoramento insert(Monitoramento obj) {
