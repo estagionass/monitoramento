@@ -19,8 +19,8 @@ public class MonitoramentoResource {
 	private MonitoramentoService service;
 	
 	@GetMapping
-	public ResponseEntity<?> findLastData(){
-		Monitoramento obj = service.findLastData();
+	public ResponseEntity<?> findLastObject(){
+		Monitoramento obj = service.findLastObject();
 		return ResponseEntity.ok().body(obj);
 	}
 	
