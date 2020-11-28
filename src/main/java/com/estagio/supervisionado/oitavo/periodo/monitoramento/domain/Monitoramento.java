@@ -9,18 +9,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name="tbl_clinica_dados")
 public class Monitoramento implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private Integer idClinica;
 	private Double temperatura;
 	private Double umidade;
-	private Date dtHrDados;
+	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
+	private Date dtHrDados = new Date(System.currentTimeMillis()-10800000);
+	
 	
 	public Monitoramento() {
 	}
@@ -61,6 +65,10 @@ public class Monitoramento implements Serializable {
 
 	public Date getDtHrDados() {
 		return dtHrDados;
+	}
+
+	public void setDtHrDados(Date dtHrDados) {
+		this.dtHrDados = dtHrDados;
 	}
 	
 }
