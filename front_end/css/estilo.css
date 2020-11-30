@@ -1,0 +1,47 @@
+/*Formatação padrão para o HTML*/
+html {
+    font-family: Arial;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+
+/*Tamanho de letra adaptável para o h2*/
+h2 {
+    font-size: 2.0rem;
+}
+
+/*Tamanho de letra adaptável para o parágrafo*/
+p {
+    font-size: 2.3rem;
+}
+
+/*Tamanho de letra adaptável para as unidades de medida*/
+.unidades {
+    font-size: 1.5rem;
+}
+
+/*Tamanho de letra adaptável para os textos*/
+.textos {
+    font-size: 1.5rem;
+}
+
+/*Cor verde para o ícone do termometro e média da temperatura*/
+.fa-thermometer-half, .fa-chart-bar:before {
+    color:#059e8a;
+}
+
+/*Cor para o ícone da umidade*/
+.fa-tint {
+    color:#00add6;
+}
+
+/*Cor para o ícone do nome da clínica*/
+.fa-paw{
+    color: #8a4407;
+}
+
+/*Cor para o ícone do relógio*/
+.fa-clock{
+    color: #ff7700;
+}
