@@ -7,3 +7,7 @@
 - **Banco de dados**, equipe responsável por projetar e criar na nuvem um banco de dados seguindo os requisitos passados.
 - **Back-end e Front-end**, essa equipe e responsável pela criação da aplicação web e disponibilzar a mesma na nuvem, essa equipe vai implementar desde as páginas WEB até a criação da API que é responsável pelas consultas e inserções dos dados no banco de dados disponibilizado pela equipe de Banco de dados.
 - **Dispositivo**, equipe responsável por obter as medições de temperatura e umidade de um refrigerador em uma clínica utilizando um microcontrolador e enviar um objeto do tipo JSON para a API disponibilizada pela equipe de Back-end e Front-end fazendo assim a inserção no banco de dados das informações coletadas.
+
+[![Front-end do projeto.](https://i.imgur.com/1N3gJbG.png "Front-end do projeto.")](http://front-end-monitoramento.s3-website-sa-east-1.amazonaws.com/ "Front-end do projeto.")
+
+[![Documentação Swagger (OpenAPI)](https://i.imgur.com/8ilBDeZ.png "Documentação Swagger (OpenAPI)")](http://monitoramento.sa-east-1.elasticbeanstalk.com/ "Documentação Swagger (OpenAPI)")
