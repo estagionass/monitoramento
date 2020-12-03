@@ -14,15 +14,12 @@ public class TblClinicaDadosService {
 	@Autowired
 	private TblClinicaDadosRepository repository;
 	
-	public TblClinicaDados findLastData() {
-		return repository.findLastData();
-	}
-	
-	public List<TblClinicaDados> findLastDataHour() {
-		return repository.findLastDataHour();
+	public List<TblClinicaDados> findAverage() {
+		return repository.findAverage();
 	}
 	
 	public TblClinicaDados insert(TblClinicaDados obj) {
 		return repository.save(obj);
 	}
+	
 }

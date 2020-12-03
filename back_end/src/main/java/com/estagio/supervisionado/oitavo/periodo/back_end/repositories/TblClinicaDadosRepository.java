@@ -10,13 +10,9 @@ import com.estagio.supervisionado.oitavo.periodo.back_end.domain.TblClinicaDados
 
 // Camada de acesso ao banco de dados
 @Repository
-public interface TblClinicaDadosRepository extends JpaRepository<TblClinicaDados, Integer>{
-	
-	// Query que faz a consulta da última informação do banco de dados
-	@Query(nativeQuery = true, value = "SELECT * FROM `tbl_clinica_dados` ORDER BY `id` DESC LIMIT 1")
-	TblClinicaDados findLastData();
-	
-	// Query que faz a consulta dos 60 últimos dados do banco de dados, para fazer a média da temperatura
-	@Query(nativeQuery = true, value = "SELECT * FROM `tbl_clinica_dados` ORDER BY `id` DESC LIMIT 60")
-	List<TblClinicaDados> findLastDataHour();
+public interface TblClinicaDadosRepository extends JpaRepository<TblClinicaDados, Integer> {
+
+	// Receber por parâmetro o id_clinica e somente a data
+	@Query(nativeQuery = true, value = "SELECT * FROM monitoramento.tbl_clinica_dados WHERE id_clinica= 1 AND dt_hr_dados BETWEEN '2020-12-01 00:00:00' AND '2020-12-01 23:59:59'")
+	List<TblClinicaDados> findAverage();
 }

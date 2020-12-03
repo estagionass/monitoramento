@@ -1,9 +1,9 @@
 com\estagio\supervisionado\oitavo\periodo\back_end\resources\TblClinicaDadosResource.class
-com\estagio\supervisionado\oitavo\periodo\back_end\resources\TblClinicaResource.class
 com\estagio\supervisionado\oitavo\periodo\back_end\domain\TblClinicaDados.class
 com\estagio\supervisionado\oitavo\periodo\back_end\MonitoramentoApplication.class
-com\estagio\supervisionado\oitavo\periodo\back_end\domain\TblClinica.class
 com\estagio\supervisionado\oitavo\periodo\back_end\repositories\TblClinicaDadosRepository.class
 com\estagio\supervisionado\oitavo\periodo\back_end\services\TblClinicaDadosService.class
 com\estagio\supervisionado\oitavo\periodo\back_end\repositories\TblClinicaRepository.class
+com\estagio\supervisionado\oitavo\periodo\back_end\resources\TblClinicaResource.class
+com\estagio\supervisionado\oitavo\periodo\back_end\domain\TblClinica.class
 com\estagio\supervisionado\oitavo\periodo\back_end\services\TblClinicaService.class

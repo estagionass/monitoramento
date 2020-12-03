@@ -1,8 +1,9 @@
 package com.estagio.supervisionado.oitavo.periodo.back_end.domain;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.ZonedDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,14 +13,14 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-// Entidade responsável pelos dados
+//Entidade responsável pelos dados da clínica
 @Entity
-@Table(name="tbl_clinica_dados")
+@Table(name = "tbl_clinica_dados")
 public class TblClinicaDados implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	@NotNull
 	private Integer idClinica;
@@ -27,12 +28,12 @@ public class TblClinicaDados implements Serializable {
 	private Double temperatura;
 	@NotNull
 	private Double umidade;
-	// Formata a exibição da hora no envio do JSON
-	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
-	// Recebe a data atual do envio em milissegundos e diminui três horas, horário do Brasil
-	private Date dtHrDados = new Date(System.currentTimeMillis()-10800000);
-	
-	
+	@NotNull
+	@Column(insertable = false)
+	// Formata a exibição da hora no recebimento do JSON
+	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
+	private ZonedDateTime dtHrDados;
+
 	public TblClinicaDados() {
 	}
 
@@ -44,6 +45,10 @@ public class TblClinicaDados implements Serializable {
 
 	public Integer getId() {
 		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Integer getIdClinica() {
@@ -70,12 +75,12 @@ public class TblClinicaDados implements Serializable {
 		this.umidade = umidade;
 	}
 
-	public Date getDtHrDados() {
+	public ZonedDateTime getDtHrDados() {
 		return dtHrDados;
 	}
 
-	public void setDtHrDados(Date dtHrDados) {
+	public void setDtHrDados(ZonedDateTime dtHrDados) {
 		this.dtHrDados = dtHrDados;
 	}
-	
+
 }
