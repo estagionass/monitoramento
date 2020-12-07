@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.estagio.supervisionado.oitavo.periodo.monitoramento.MonitoramentoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.043 s <<< FAILURE! - in com.estagio.supervisionado.oitavo.periodo.monitoramento.MonitoramentoApplicationTests
-com.estagio.supervisionado.oitavo.periodo.monitoramento.MonitoramentoApplicationTests  Time elapsed: 1.041 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.337 s <<< FAILURE! - in com.estagio.supervisionado.oitavo.periodo.monitoramento.MonitoramentoApplicationTests
+com.estagio.supervisionado.oitavo.periodo.monitoramento.MonitoramentoApplicationTests  Time elapsed: 0.336 s  <<< ERROR!
 java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
 

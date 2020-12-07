@@ -15,7 +15,7 @@ dthrfim = vars.dthrfim
 // Cria um XMLHttpRequest responável por fazer requisições assíncronas (Ajax)
 xmlHttp = new XMLHttpRequest()
 // Url para obter o JSON dos dados com o id passado por parâmetro
-dados = 'http://127.0.0.1:8080/api/v1/monitoramento/clinica?id=' + id
+dados = 'http://monitoramento.sa-east-1.elasticbeanstalk.com/api/v1/monitoramento/clinica?id=' + id
 
 // Função responsável por receber e atualizar os dados no front-end
 function getDados() {
@@ -49,7 +49,7 @@ function getDados() {
 // Cria um XMLHttpRequest responável por fazer requisições assíncronas (Ajax)
 xmlHttp2 = new XMLHttpRequest()
 // Url para obter a média da temperatura
-media = 'http://127.0.0.1:8080/api/v1/monitoramento/media?id=' + id + '&dthrini=' + dthrini + '&dthrfim=' + dthrfim
+media = 'http://monitoramento.sa-east-1.elasticbeanstalk.com/api/v1/monitoramento/media?id=' + id + '&dthrini=' + dthrini + '&dthrfim=' + dthrfim
 
 function getMediaTemperatura() {
 
