@@ -14,8 +14,8 @@ public class TblClinicaDadosService {
 	@Autowired
 	private TblClinicaDadosRepository repository;
 	
-	public List<TblClinicaDados> findAverage() {
-		return repository.findAverage();
+	public List<TblClinicaDados> findAverage(Integer id, String dthrini, String dthrfim) {
+		return repository.findAverage(id, dthrini, dthrfim);
 	}
 	
 	public TblClinicaDados insert(TblClinicaDados obj) {

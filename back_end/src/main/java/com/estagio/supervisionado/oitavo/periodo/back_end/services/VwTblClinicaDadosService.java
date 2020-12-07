@@ -12,8 +12,8 @@ public class VwTblClinicaDadosService {
 	@Autowired
 	private VwTblClinicaDadosRepository repository;
 	
-	public VwTblClinicaDados findLastData() {
-		return repository.findLastData();
+	public VwTblClinicaDados findLastData(Integer id) {
+		return repository.findLastData(id);
 	}
 	
 }

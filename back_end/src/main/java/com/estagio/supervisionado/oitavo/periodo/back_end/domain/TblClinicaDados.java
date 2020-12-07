@@ -37,7 +37,7 @@ public class TblClinicaDados implements Serializable {
 	public TblClinicaDados() {
 	}
 
-	public TblClinicaDados(Integer idClinica, Double temperatura, Double umidade) {
+	public TblClinicaDados(@NotNull Integer idClinica, @NotNull Double temperatura, @NotNull Double umidade) {
 		this.idClinica = idClinica;
 		this.temperatura = temperatura;
 		this.umidade = umidade;

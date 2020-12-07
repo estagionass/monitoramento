@@ -1,71 +1,81 @@
 <!DOCTYPE HTML>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="Utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!--Importando o Font Awesome - Ícones-->
-        <script src="https://kit.fontawesome.com/2c8f94af08.js" crossorigin="anonymous"></script>
-        <!--Importando o CSS-->
-        <link rel="stylesheet" href="css/estilo.css">
-        <!--Importando o JavaScript-->
-        <script src="js/javascript.js"></script>
+<head>
+    <meta charset="Utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Título da página-->
-        <title>Monitoramento Clínica</title>
+    <!--Importando o Font Awesome - Ícones-->
+    <script src="https://kit.fontawesome.com/2c8f94af08.js" crossorigin="anonymous"></script>
+    <!--Importando o CSS-->
+    <link rel="stylesheet" href="css/estilo.css">
 
-        <!--Ícone da página-->
-        <link rel="icon" href="img/temperatura.svg">
-    </head>
+    <!--Importando o JavaScript-->
+    <script src="js/javascript.js"></script>
 
-    <!--Ao carregar a página os métodos passados são chamados-->
-    <body onload="getDados(), getMediaTemperatura()">
-        
-        <!--Título inicial-->
-        <h2>Monitoramento Clínica</h2>
-        
-        <p>
-            <!--Ícone pata de um pet-->
-            <i class="fas fa-paw"></i>
-            <span class="textos">Nome da Clínica: </span>
-            <span id="nome_clinica"></span>
-        </p>
+    <!--Título da página-->
+    <title>Monitoramento Clínica</title>
 
-        <p>
-            <!--Ícone do termômetro-->
-            <i class="fas fa-thermometer-half"></i>
-            <span class="textos">Temperatura:</span>
-            <span id="temperatura"></span>
-            <!--Símbolo de ºC -->
-            <sup class="unidades">&deg;C</sup>
-        </p>
+    <!--Ícone da página-->
+    <link rel="icon" href="img/temperatura.svg">
+</head>
 
-        <p>
-            <!--Ícone de uma gota-->
-            <i class="fas fa-tint"></i>
-            <span class="textos">Umidade:</span>
-            <span id="umidade"></span>
-            <!--Símbolo de % -->
-            <sup class="unidades">&percnt;</sup>
-        </p>
+<!--Ao carregar a página os métodos passados são chamados-->
 
-        <p>
-            <!--Ícone de um gráfico-->
-            <i class="far fa-chart-bar"></i>
-            <span class="textos">Média da temperatura por hora:</span>
-            <span id="media_temperatura"></span>
-            <!--Símbolo de ºC -->
-            <sup class="unidades">&deg;C</sup>
-        </p>
+<body onload="getDados(), getMediaTemperatura()">
 
-        <p>
-            <!--Ícone de um relógio-->
-            <i class="fas fa-clock"></i>
-            <span class="textos">Última atualização:</span>
-            <span id="atualizacao"></span>
-        </p>
-            
-    </body>
+    <!--Título inicial-->
+    <h2>Monitoramento Clínica</h2>
+
+    <p>
+        <!--Ícone de uma pata de um pet-->
+        <i class="fas fa-paw"></i>
+        <span class="textos">Nome da Clínica: </span>
+        <span id="nome_clinica"></span>
+
+    </p>
+
+    <p>
+        <!--Ícone de um médico-->
+        <i class="fas fa-user-md"></i>
+        <span class="textos">Nome do Veterinário: </span>
+        <span id="nome_veterinario"></span>
+    </p>
+
+    <p>
+        <!--Ícone do termômetro-->
+        <i class="fas fa-thermometer-half"></i>
+        <span class="textos">Temperatura:</span>
+        <span id="temperatura"></span>
+        <!--Símbolo de ºC -->
+        <sup class="unidades">&deg;C</sup>
+    </p>
+
+    <p>
+        <!--Ícone de uma gota-->
+        <i class="fas fa-tint"></i>
+        <span class="textos">Umidade:</span>
+        <span id="umidade"></span>
+        <!--Símbolo de % -->
+        <sup class="unidades">&percnt;</sup>
+    </p>
+
+    <p>
+        <!--Ícone de um gráfico-->
+        <i class="far fa-chart-bar"></i>
+        <span class="textos">Média da temperatura por hora:</span>
+        <span id="media_temperatura"></span>
+        <!--Símbolo de ºC -->
+        <sup class="unidades">&deg;C</sup>
+    </p>
+
+    <p>
+        <!--Ícone de um relógio-->
+        <i class="fas fa-clock"></i>
+        <span class="textos">Última atualização:</span>
+        <span id="dt_hr_dados"></span>
+    </p>
+
+</body>
 
 </html>

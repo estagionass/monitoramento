@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.estagio.supervisionado.oitavo.periodo.back_end.domain.TblClinicaDados;
@@ -33,10 +34,10 @@ public class TblClinicaDadosResource {
 	// Descrição do método no Swagger(OpenAPI)
 	@Operation(summary = "Consulta os registros da última hora e retorna a média da temperatura.")
 	@GetMapping(value = "/media")
-	public ResponseEntity<?> findAverage(){
+	public ResponseEntity<?> findAverage(@RequestParam("id")Integer id, @RequestParam("dthrini")String dthrini, @RequestParam("dthrfim")String dthrfim){
 		List<TblClinicaDados> objs = new ArrayList<>();
 		Double mediaTemperatura = 0.0;
-		objs = service.findAverage();
+		objs = service.findAverage(id, dthrini, dthrfim);
 		for (int i = 0; i < objs.size(); i++) {
 			mediaTemperatura += objs.get(i).getTemperatura();
 		}
